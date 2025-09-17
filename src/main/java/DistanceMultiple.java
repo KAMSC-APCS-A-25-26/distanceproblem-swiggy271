@@ -30,10 +30,36 @@
 import java.util.Scanner;
 
 
-public class DistanceMultiple {
+public class DistanceMultiple
+{
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // signature
+        System.out.println("Shuler Wiegerink\nAPCS-A\n2.2-2.3 program");
 
 
+        // prompt user for the number of runs
+        System.out.println("\n\nHow many timed would you like the program to run:  ");
+        int numRuns = sc.nextInt();
+
+
+        for (int i = 0; i < numRuns; i++) {
+            // prompt user for inputs
+            System.out.println("\nEnter 2 coordinates:  ");
+
+            // set delimiter pattern for correct formatting
+            sc.useDelimiter("[(),\\s]+");
+
+            double x1 = sc.nextInt();
+            double y1 = sc.nextInt();
+            double x2 = sc.nextInt();
+            double y2 = sc.nextInt();
+
+            // calculate and output
+            System.out.println("The distance is " + Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2)));
+
+
+        }
     }
-
 }
